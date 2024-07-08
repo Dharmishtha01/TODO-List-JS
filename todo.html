@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container" style="max-width: 700px;">
+            <div class="jumbotron text-center">
+                <h2>TODO APP</h2>
+                <!-- Add Items fields -->
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Write Your todo here..." id="itemField">
+                    <div class="input-group-btn">
+                        <button id="additem" class="btn btn btn-info" style="margin-left: 10px; height: 35px"
+                            type="button">Add item</button>
+                    </div>
+                </div>
+            </div>
+            <!-- searchbar -->
+            <div class="input-group" style="margin-top: 20px;">
+                Search:
+                <input type="search" class="form-control" placeholder="Search your todos..." id="searchField">
+            </div>
+
+        </div>
+    </div>
+    <div class="container" style="max-width: 700px; margin-top: 20px;">
+        <div class="display">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Items</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <template id="noItemsMsg">
+                    <tr>
+                        <td colspan="3" class="text-center bg-danger">No Items to Display!! please Add first</td>
+                    </tr>
+                </template>
+                <template id="noSearchResultsMsg">
+                    <tr>
+                        <td colspan="3" class="text-center bg-warning">No search Found</td>
+                    </tr>
+                </template>
+                <tbody id="records"> <!-- Display dynamic row here --></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+
+</html>
